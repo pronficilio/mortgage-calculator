@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mortgage Calculator</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="container py">Mortgage Calculator</h1>
+        </header>
+        <main class="container">
+            <section class="block">
+                <div class="block__entrance">
+                    <h2>Change values to calculate your results</h2>
+                    <hr>
+                    <div class="input__range py">
+                        <label>
+                            Years of mortgage
+                        </label>
+                        <div>
+                            <div class="input__range__group">
+                                <div class="limit__value__inf">1</div>
+                                <div>
+                                    <input type="range" class="slider slider--years" min="1" max="40" value="30">
+                                </div>
+                                <div class="limit__value__sup">40</div>
+                            </div>
+                            <input type="text" class="text-center slider__value slider--years--value" value="30" readonly>
+                        </div>
+                        <br class="clearfix">
+                    </div>
+                    <div class="input__range py">
+                        <label>
+                            Rate of interest (%)
+                        </label>
+                        <div>
+                            <div class="input__range__group">
+                                <div class="limit__value__inf">0.1</div>
+                                <div>
+                                    <input type="range" class="slider slider--rate" min="0.1" max="10" value="1.8" step="0.1">
+                                </div>
+                                <div class="limit__value__sup">10</div>
+                            </div>
+                            <input type="text" class="text-center slider__value slider--rate--value" value="1.8" readonly>
+                        </div>
+                        <br class="clearfix">
+                    </div>
+                    <div class="input__text">
+                        <label>
+                            Load Amount
+                        </label>
+                        <div>
+                            <span class="symbol">$</span>
+                            <input type="text" class="input__text--load">
+                            <span class="input__text--error">Mandatory field</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input__text">
+                                <label>
+                                    Annual Tax
+                                </label>
+                                <div>
+                                    <span class="symbol">$</span>
+                                    <input type="text" class="input__text--tax">
+                                    <span class="input__text--error">Mandatory field</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input__text">
+                                <label>
+                                    Annual Insurance
+                                </label>
+                                <div>
+                                    <span class="symbol">$</span>
+                                    <input type="text" class="input__text--insurance">
+                                    <span class="input__text--error">Mandatory field</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <button class="button__primary" onclick="calculate()">Calculate</button>
+                    </p>
+                </div>
+            </section>
+            <aside class="aside">
+                <section class="aside__output">
+                    <h3>Your results</h3>
+                    <p class="output--label">Principal & Interest</p>
+                    <p class="output--result output--result--principal">
+                        $ - -
+                    </p>
+                    <hr>
+                    <p class="output--label">Tax</p>
+                    <p class="output--result output--result--tax">
+                        $ - -
+                    </p>
+                    <hr>
+                    <p class="output--label">Insurance</p>
+                    <p class="output--result output--result--insurance">
+                        $ - -
+                    </p>
+                    <hr>
+                    <p class="output--label output--label--total">Total Monthly Payment</p>
+                    <p class="output--result output--result--total">
+                        $ - -
+                    </p>
+                    <hr>
+                </section>
+            </aside>
+        </main>
+        <script src="js/main.js"></script>
+    </body>
+</html>
